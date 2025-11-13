@@ -987,6 +987,8 @@ section.parcerias h2 {
     padding: 40px 20px;
     background: linear-gradient(135deg, #F8F5FF 0%, #FFFFFF 100%);
     border-top: 1px solid #E8E0F5;
+    position: relative;
+    z-index: 1;
 }
 
 .mobile-auth-buttons-container {
@@ -1014,6 +1016,10 @@ section.parcerias h2 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
+    z-index: 1000;
+    pointer-events: auto;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .mobile-btn-entrar-full::before,
@@ -1724,14 +1730,16 @@ footer {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
+    z-index: 998;
     opacity: 0;
     transition: opacity 0.3s ease;
+    pointer-events: none;
 }
 
 .menu-overlay.active {
     display: block;
     opacity: 1;
+    pointer-events: auto;
 }
 
 @media (max-width: 768px) {

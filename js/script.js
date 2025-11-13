@@ -562,3 +562,26 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Garantir que os botões mobile funcionem corretamente
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileAuthButtons = document.querySelectorAll('.mobile-btn-entrar-full, .mobile-btn-cadastrar-full');
+    mobileAuthButtons.forEach(button => {
+        // Adicionar listener para touch events no mobile
+        button.addEventListener('touchend', function(e) {
+            e.preventDefault();
+            const href = this.getAttribute('href');
+            if (href) {
+                window.location.href = href;
+            }
+        }, { passive: false });
+        
+        // Garantir que cliques também funcionem
+        button.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href && !e.defaultPrevented) {
+                window.location.href = href;
+            }
+        });
+    });
+});
