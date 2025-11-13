@@ -1805,6 +1805,12 @@ footer {
         display: none;
     }
 
+    /* Reduzir padding do header no mobile */
+    header.main-header,
+    header {
+        padding: 10px 0;
+    }
+
     .navbar {
         padding: 0 15px;
         position: relative;
@@ -5688,6 +5694,13 @@ footer {
     .agendamento-info h3 {
         font-size: 16px;
     }
+    
+    /* Reduzir ainda mais o padding do header em telas muito pequenas */
+    header.main-header,
+    header {
+        padding: 8px 0;
+    }
+    
     .navbar {
         padding: 0 10px;
     }
