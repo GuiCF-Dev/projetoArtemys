@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@1..1000&display=swap');
+
+/* Reset e configurações básicas */
+* {
+    font-family: 'Ysabeau SC', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-fundo: #FFFFFF;
+    --cor-borda: #E6DFFF;
+    --cor-texto-principal: #6A4C9C;
+    --cor-texto-escuro: #3B2561;
+    --cor-link-ativo-fundo: #E6DFFF;
+    --cor-link-ativo-texto: #3B2561;
+    --cor-roxo-principal: #7A2FF5;
+    --cor-laranja: #F58634;
+    --cor-fundo-claro: #F8F6FD;
+}
+
+body {
+    font-family: 'Ysabeau SC', sans-serif;
+    background-color: #FFFFFF;
+    min-height: 100vh;
+    color: var(--cor-texto-escuro);
+}
+
+/* Título da página */
+.login-page-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--cor-texto-escuro);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+
+/* Container principal */
+.login-container {
+    width: 100%;
+    max-width: 450px;
+    padding: 40px 20px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+/* Cartão de login */
+.login-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin-top: 0;
+}
+
+/* Conteúdo */
+.login-content {
+    padding: 30px;
+}
+
+/* Seção de tipo de conta */
+.account-type-section {
+    margin-bottom: 25px;
+}
+
+.account-type-section h2 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: var(--cor-texto-escuro);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+}
+
+.account-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.account-option {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    border: 2px solid var(--cor-borda);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+.account-option:hover {
+    border-color: var(--cor-roxo-principal);
+    background-color: var(--cor-fundo-claro);
+}
+
+.account-option.selected {
+    border-color: var(--cor-roxo-principal);
+    background-color: var(--cor-link-ativo-fundo);
+}
+
+.option-bullet {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid var(--cor-texto-principal);
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.account-option.selected .option-bullet {
+    border-color: var(--cor-roxo-principal);
+    background-color: var(--cor-roxo-principal);
+}
+
+.option-text {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* Formulário */
+.login-form {
+    margin: 25px 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--cor-texto-escuro);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px 15px;
+    border: 2px solid var(--cor-borda);
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s;
+    background-color: var(--cor-fundo-claro);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--cor-roxo-principal);
+    background-color: #fff;
+}
+
+.login-button {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(to right, var(--cor-roxo-principal), #6A4C9C);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.login-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(122, 47, 245, 0.4);
+}
+
+.login-button:active {
+    transform: translateY(0);
+}
+
+/* Seção de recuperar senha */
+.forgot-password-section {
+    text-align: right;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.forgot-link {
+    color: var(--cor-texto-principal);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+    transition: color 0.3s;
+}
+
+.forgot-link:hover {
+    color: var(--cor-roxo-principal);
+    text-decoration: underline;
+}
+
+/* Seção de registro */
+.register-section {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.register-section p {
+    color: var(--cor-texto-principal);
+    font-size: 14px;
+}
+
+.register-link {
+    color: var(--cor-laranja);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.register-link:hover {
+    color: #E0792F;
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 20px 15px;
+    }
+    
+    .login-content {
+        padding: 20px;
+    }
+    
+    .account-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .login-page-title {
+        font-size: 24px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}

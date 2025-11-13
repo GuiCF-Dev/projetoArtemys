@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Artemys</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home page do site Artemys">
+    <meta name="keywords" content="Veterinaria,Pets,Emergência">
+    <meta name="author" content="Atemys">
+    <meta name="robots" content="index,follw">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="./assets/Vetorizado.svg" alt="Logo Artemys">
+                </a>
+                <div class="nav-logo-text">
+                    <span class="brand-name">ARTEMYS</span>
+                    <span class="brand-slogan">CONECTANDO QUEM AMA A QUEM CUIDA</span>
+                </div>
+            </div>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#" class="active">Início</a></li>
+                <li><a href="artigoD.html">Artigos</a></li>
+                <li><a href="planoD.html">Planos de Assinatura</a></li>
+                <li><a href="sobreD.html">Sobre Nós</a></li>
+                <li><a href="servicosD.html">Serviços</a></li>
+                <li class="mobile-auth-buttons">
+                    <a href="homeLogado.html" class="mobile-btn-entrar">Entrar</a>
+                    <a href="homeLogado.html" class="mobile-btn-cadastrar">Cadastrar</a>
+                </li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="btn-login"><a href="login.html">Entrar</a></button>
+                <button class="btn-signup"><a href="login.html">Cadastrar</a></button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="home">
+            <div class="home-container">
+                <div class="home-content">
+                    <div class="home-tag">
+                        <img src="./assets/iconePatapreta.png" alt="ícone de pata">
+                        <span>Primeiros Socorros e Bem-Estar Pet</span>
+                    </div>
+
+                    <div class="home-brand">
+                        <img class="imagem-logo" src="./assets/Vetorizado.svg"
+                            alt="Logo de uma lua roxa crescente com um cachorro e um gato de cor laranja dentro da lua">
+                        <div class="brand-text">
+                            <h2>Artemys</h2>
+                            <h3>Conectanto quem ama a quem cuida</h3>
+                        </div>
+                    </div>
+
+                    <p class="home-description">Ambulância veterinária, artigos educativos e planos com telemedicina
+                        e parcerias.</p>
+
+                    <div class="home-botoes">
+                        <a href="planoD.html" class="btn btn-laranja">
+                            <img src="./assets/iconePlanosplataforma.png" alt="ícone planos">
+                            <span>Veja nossos Planos</span>
+                        </a>
+                        <button class="btn btn-roxo btn-disabled" disabled>
+                            <img src="./assets/iconeChamarambulancia.png" alt="ícone ambulância">
+                            <span>Acionar Ambulância</span>
+                        </button>
+                        <a href="servicosD.html" class="btn btn-laranja">
+                            <span>Explorar Serviços</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="home-image-wrapper">
+                    <img class="home-image" src="./assets/ImagemMain1.png"
+                        alt="Uma imagem de um homem de meia idade dando carinho para um cachorro de andador de patas traseiras">
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-servicos">
+            <div class="servicos-container">
+                <img class="servicos-bg-image" src="./assets/imagemArty.png" alt="Mascote Arty cuidando de um filhote">
+                <div class="servicos-conteudo-overlay">
+                    <h2>NOSSOS SERVIÇOS</h2>
+                    <ul class="servicos-lista">
+                        <li>
+                            <img src="./assets/Book.png" alt="ícone de um livro">
+                            <p>GUIAS E ARTIGOS PARA A SAÚDE E BEM-ESTAR DO SEU PET</p>
+                        </li>
+                        <li>
+                            <img src="./assets/Siren.png" alt="ícone de sirene">
+                            <p>SERVIÇOS DE AMBULÂNCIA EM CASOS DE EMERGÊNCIA</p>
+                        </li>
+                        <li>
+                            <img src="./assets/Nurse.png" alt="ícone de saúde">
+                            <p>CONSULTAS VETERINÁRIAS DO MELHORES PROFISSIONAIS</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-planos">
+            <h2>Planos de Assinatura</h2>
+            <p class="subtitulo-planos">Escolha o plano ideal para cuidar do seu pet</p>
+
+            <div class="planos-container">
+                <div class="card-plano card-plano--orange">
+                    <div class="card-plano-header">
+                        <h3>Primeiro Cuidado</h3>
+                        <div class="preco">
+                            <span class="preco-valor">Grátis</span>
+                            <span class="preco-mes">/Mês</span>
+                        </div>
+                    </div>
+                    <div class="card-plano-body">
+                        <ul class="lista-beneficios">
+                            <li>
+                                <img class="simbolosBeneficios" src="./assets/check.png" alt="check">
+                                <p>Acesso ao mapa de clínicas e hospitais veterinários 24h</p>
+                            </li>
+                            <li>
+                                <img class="simbolosBeneficios" src="./assets/check.png" alt="check">
+                                <p>Artigos e dicas básicas de cuidados e prevenção para pets</p>
+                            </li>
+                            <li>
+                                <img class="simbolosBeneficios" src="./assets/check.png" alt="check">
+                                <p>Checklist digital de primeiros socorros</p>
+                            </li>
+                            <li class="beneficio-inativo">
+                                <img class="simbolosBeneficios" src="./assets/X.png" alt="X">
+                                <p>Acesso a nossa IA</p>
+                            </li>
+                            <li class="beneficio-inativo">
+                                <img class="simbolosBeneficios" src="./assets/X.png" alt="X">
+                                <p>Consultas online com veterinários</p>
+                            </li>
+                        </ul>
+                        <a href="planoD.html" class="btn-assinar btn-assinar--orange">Assinar Plano</a>
+                    </div>
+                </div>
+
+                <div class="card-plano card-plano--purple card-plano--popular">
+                    <div class="popular-tag">POPULAR</div>
+                    <div class="card-plano-header">
+                        <h3>Cuidado Completo</h3>
+                        <div class="preco">
+                            <span class="preco-valor">R$ 100,00</span>
+                            <span class="preco-mes">/Mês</span>
+                        </div>
+                    </div>
+                    <div class="card-plano-body">
+                        <ul class="lista-beneficios">
+                            <li>
+                                <img class="simbolosBeneficios" src="./assets/check.png" alt="check">
+                                <p>Acesso ao mapa de clínicas e hospitais veterinários 24h</p>
+                            </li>
+                            <li>
+                                <img class="simbolosBeneficios" src="./assets/check.png" alt="check">
+                                <p>Artigos e dicas básicas de cuidados e prevenção para pets</p>
+                            </li>
+                            <li>
+                                <img class="simbolosBeneficios" src="./assets/check.png" alt="check">
+                                <p>Checklist digital de primeiros socorros</p>
+                            </li>
+                            <li>
+                                <img class="simbolosBeneficios" src="./assets/check.png" alt="check">
+                                <p>Acesso a nossa IA</p>
+                            </li>
+                            <li>
+                                <img class="simbolosBeneficios" src="./assets/check.png" alt="check">
+                                <p>Consultas online com veterinários</p>
+                            </li>
+                            <li>
+                                <img class="simbolosBeneficios" src="./assets/check.png" alt="check">
+                                <p>Descontos nos serviços de ambulância</p>
+                            </li>
+                        </ul>
+                        <a href="planoD.html" class="btn-assinar btn-assinar--purple">Assinar Plano</a>
+                    </div>
+                </div>
+
+                <div class="card-plano card-plano--orange">
+                    <div class="card-plano-header">
+                        <h3>Cuidado Master</h3>
+                        <div class="preco">
+                            <span class="preco-valor">R$ 200,00</span>
+                            <span class="preco-mes">/Mês</span>
+                        </div>
+                    </div>
+                    <div class="card-plano-body">
+                        <ul class="lista-beneficios">
+                            <li>
+                                <img class="simbolosBeneficios" src="./assets/check.png" alt="check">
+                                <p>Acesso ao mapa de clínicas e hospitais veterinários 24h</p>
+                            </li>
+                            <li>
+                                <img class="simbolosBeneficios" src="./assets/check.png" alt="check">
+                                <p>Artigos e Dicas Premium de Cuidados e Prevenção</p>
+                            </li>
+                            <li>
+                                <img class="simbolosBeneficios" src="./assets/check.png" alt="check">
+                                <p>Checklist digital de primeiros socorros</p>
+                            </li>
+                            <li>
+                                <img class="simbolosBeneficios" src="./assets/check.png" alt="check">
+                                <p>Acesso a nossa IA</p>
+                            </li>
+                            <li>
+                                <img class="simbolosBeneficios" src="./assets/check.png" alt="check">
+                                <p>Consultas online com veterinários</p>
+                            </li>
+                            <li>
+                                <img class="simbolosBeneficios" src="./assets/check.png" alt="check">
+                                <p>Acesso a serviço de ambulância</p>
+                            </li>
+                        </ul>
+                        <a href="planoD.html" class="btn-assinar btn-assinar--orange">Assinar Plano</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="GuiasEmDestaque">
+            <h2>Artigos em Destaque</h2>
+            <p class="subtitulo-guias">Conteúdo confiável para agir com segurança e promover o bem-estar</p>
+
+            <div class="cardArtigos">
+                <div class="card-artigo">
+                    <div class="card-artigo-imagem-wrapper">
+                        <img src="./assets/rotinaImagem.jpeg" alt="Rotina de cuidado com pet">
+                    </div>
+                    <div class="card-artigo-conteudo">
+                        <div class="card-artigo-categoria">
+                            <img class="iconeGeneroGuias" src="./assets/iconeEtiquetafav.png" alt="ícone de dicas">
+                            <p class="nomeGeneroGuia">Dicas Gerais</p>
+                        </div>
+                        <p class="tituloGuia">Rotina de Cuidado e Prevenção</p>
+                        <p class="descricaoGuia">Missing, Alimentação, Vacinas e Check-ups sem Mistérios</p>
+                        <a href="artigoD.html" class="btn-saiba-mais">Saiba Mais</a>
+                    </div>
+                </div>
+
+                <div class="card-artigo">
+                    <div class="card-artigo-imagem-wrapper">
+                        <img src="./assets/imagemGuia2.png" alt="Ilustração de um cachorro com engasgo">
+                    </div>
+                    <div class="card-artigo-conteudo">
+                        <div class="card-artigo-categoria">
+                            <img class="iconeGeneroGuias" src="./assets/iconePrimeirosSocorros.png"
+                                alt="ícone de primeiros socorros">
+                            <p class="nomeGeneroGuia">Primeiros Socorros</p>
+                        </div>
+                        <p class="tituloGuia">Como agir em engasgos e intoxicações</p>
+                        <p class="descricaoGuia">Passo a Passo Para Situação de Emergência Até Chegar ao Atendimento
+                        </p>
+                        <a href="artigoD.html" class="btn-saiba-mais">Saiba Mais</a>
+                    </div>
+                </div>
+
+                <div class="card-artigo">
+                    <div class="card-artigo-imagem-wrapper">
+                        <img src="./assets/imagemFebre.jpg" alt="Cachorro doente com bolsa de gelo na cabeça">
+                    </div>
+                    <div class="card-artigo-conteudo">
+                        <div class="card-artigo-categoria">
+                            <img class="iconeGeneroGuias" src="./assets/iconeCoracao.png"
+                                alt="ícone de primeiros socorros">
+                            <p class="nomeGeneroGuia">Primeiros Socorros</p>
+                        </div>
+                        <p class="tituloGuia">Como tratar a febre do seu pet</p>
+                        <p class="descricaoGuia">Passo a Passo Para Tratar Seu Pet em Casos de Febre</p>
+                        <a href="artigoD.html" class="btn-saiba-mais">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <a href="artigoD.html" class="btn-ver-mais">Ver Todos os Guias</a>
+        </section>
+
+        <section class="parcerias">
+            <h2>Parcerias</h2>
+
+            <div class="parceria-container">
+                <div class="parceria-imagem">
+                    <img class="imagemParce" src="./assets/imagemParceria.png"
+                        alt="Mascote Artemys e mascote Auma Gêmea">
+                </div>
+                <div class="parceria-conteudo">
+                    <img class="parceria-logo-nome" src="./assets/nomeAumaGemea.png" alt="Nome Do projeto AumaGêmea">
+                    <p class="parceria-slogan">Encontre seu novo melhor amigo!</p>
+                    <p class="parceria-descricao">A AumaGêmea conecta pets que precisam de um lar com pessoas que
+                        querem adotar.</p>
+
+                    <div class="parceria-beneficios-header">
+                        <img class="iconeBeneficios" src="./assets/iconeBeneficios.png" alt="icone de uma medalha">
+                        <p class="tituloBeneficios">Benefícios</p>
+                    </div>
+
+                    <ul class="parceria-beneficios-lista">
+                        <li>
+                            <img src="./assets/pataRoxa.png" alt="icone de uma pata roxa">
+                            <p>Desconto de 20% off na primeira consulta em telemedicina veterinária</p>
+                        </li>
+                        <li>
+                            <img src="./assets/pataRoxa.png" alt="icone de uma pata roxa">
+                            <p>Primeiro mês grátis em artigos premium</p>
+                        </li>
+                    </ul>
+                    <button class="parceria-botao">Saiba Mais</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="logoERedesRodape">
+            <div class="brand-wrapper">
+                <img class="logoRodape" src="./assets/logo.svg"
+                    alt="Logo de uma lua roxa crescente com um cachorro e um gato de cor laranja dentro da lua">
+                <div class="nomeESloganRodape">
+                    <p class="nomeProjetoRodape">Artemys</p>
+                    <p class="sloganProjetoRodape">Conectando Quem Ama a Quem Cuida</p>
+                </div>
+            </div>
+            <ul class="listaRedesSociais">
+                <li>
+                    <a href="https://github.com/Artemys-Site" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/GitHub.png" alt="logo do site github">Github
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/company/artemys-oficial/" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="./assets/iconeInstagram.png" alt="logo da rede social instagram">Instagram
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/seu-usuario" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/LinkedIn.png" alt="logo da rede social Linkedin">LinkedIn
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="diferenciais">
+            <ul class="listaDiferenciais">
+                <li><img src="./assets/iconeRelogio.png" alt="icone de um relogio">Atendimento Rápido</li>
+                <li><img src="./assets/iconeEscudoDiferencial.png"
+                        alt="icone de um escudo com um check dentro">Procedimentos Eficazes</li>
+                <li><img src="./assets/logoBrasil.png" alt="icone do mapa do Brasil">Suporte em todo Brasil</li>
+            </ul>
+        </div>
+        <div class="direitosAutorias">
+            <img class="logoDireitosAutorais" src="./assets/iconeDireitosAutorais.png" alt="icone de direitos autorais">
+            <p class="conteudoDireitosAutorais">2025 Artemys. Todos os direitos reservados</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

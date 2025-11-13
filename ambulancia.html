@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="Artemys">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Chamado de Ambulância | Artemys</title>
+</head>
+<body>
+  <header class="main-header">
+    <nav class="navbar">
+      <div class="nav-logo">
+        <a href="homeLogado.html">
+          <img src="./assets/Vetorizado.svg" alt="Logo Artemys">
+        </a>
+        <div class="nav-logo-text">
+          <span class="brand-name">ARTEMYS</span>
+          <span class="brand-slogan">CONECTANDO QUEM AMA A QUEM CUIDA</span>
+        </div>
+      </div>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="homeLogado.html">Início</a></li>
+        <li><a href="artigo.html">Artigos</a></li>
+        <li><a href="planos.html">Planos de Assinatura</a></li>
+        <li><a href="sobre.html">Sobre Nós</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+      </ul>
+
+      <div class="nav-user-actions">
+        <a href="#" class="action-icon" aria-label="Configurações">
+          <img src="./assets/iconeConfiguracao.png" alt="Configurações">
+        </a>
+        <a href="#" class="action-icon" aria-label="Notificações">
+          <img src="./assets/iconeNotificacao.png" alt="Notificações">
+        </a>
+
+        <div class="profile-container">
+          <img src="./assets/perfilLogado.png" alt="Foto do Perfil" id="profile-pic-btn" class="profile-pic">
+          <div class="profile-dropdown" id="profile-dropdown">
+            <a href="perfil.html" class="dropdown-item">Ver Perfil</a>
+            <a href="agendamento.html" class="dropdown-item">Agendamentos</a>
+            <a href="index.html" class="dropdown-item">Sair</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="ambulancia-banner">
+      <div class="ambulancia-banner-content">
+        <a href="homeLogado.html" class="btn-voltar-ambulancia">← VOLTAR</a>
+        <span class="tag-emergencia">ATENDIMENTO DE EMERGÊNCIA</span>
+      </div>
+    </section>
+
+    <section class="ambulancia-page">
+      <div class="ambulancia-container">
+        <div class="ambulancia-header">
+          <h1 class="ambulancia-titulo">CHAMADO DE AMBULÂNCIA</h1>
+          <p class="ambulancia-subtitulo">Processo rápido em 3 passos simples</p>
+        </div>
+
+        <div class="ambulancia-progress">
+          <div class="progress-step active">
+            <span class="step-number">1</span>
+            <span class="step-label">INFORMAÇÕES</span>
+          </div>
+          <div class="progress-step">
+            <span class="step-number">2</span>
+            <span class="step-label">CONFIRMAÇÃO</span>
+          </div>
+          <div class="progress-step">
+            <span class="step-number">3</span>
+            <span class="step-label">CONCLUÍDO</span>
+          </div>
+        </div>
+
+        <div class="ambulancia-content">
+          <div class="ambulancia-form-column">
+            <div class="ambulancia-form-card">
+              <h2 class="form-card-titulo">INFORMAÇÕES DA EMERGÊNCIA</h2>
+
+              <div class="form-group-ambulancia">
+                <label for="localizacao">Sua localização (DETECTADA)</label>
+                <div class="localizacao-group">
+                  <input type="text" id="localizacao" value="Rua Visconde de Parnaíba, 1461 - SP" readonly>
+                  <button type="button" class="btn-editar">Editar</button>
+                </div>
+                <button type="button" class="btn-usar-localizacao">Usar minha localização atual</button>
+              </div>
+
+              <div class="form-group-ambulancia">
+                <label for="pet-selecao">QUAL PET PRECISA DE ATENDIMENTO?</label>
+                <select id="pet-selecao" class="select-ambulancia">
+                  <option value="">Selecione seu pet</option>
+                  <option value="pet1">Rex</option>
+                  <option value="pet2">Luna</option>
+                </select>
+              </div>
+
+              <div class="form-group-ambulancia">
+                <label>Nível de urgência</label>
+                <div class="urgencia-options">
+                  <div class="urgencia-option">
+                    <input type="radio" id="urgencia-baixa" name="urgencia" value="baixa">
+                    <label for="urgencia-baixa" class="urgencia-label urgencia-baixa">
+                      <span class="urgencia-dot"></span>
+                      <div>
+                        <strong>BAIXA</strong>
+                        <p>Pode aguardar alguns minutos</p>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="urgencia-option">
+                    <input type="radio" id="urgencia-media" name="urgencia" value="media" checked>
+                    <label for="urgencia-media" class="urgencia-label urgencia-media">
+                      <span class="urgencia-dot"></span>
+                      <div>
+                        <strong>MÉDIA</strong>
+                        <p>Situação preocupante</p>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="urgencia-option">
+                    <input type="radio" id="urgencia-alta" name="urgencia" value="alta">
+                    <label for="urgencia-alta" class="urgencia-label urgencia-alta">
+                      <span class="urgencia-dot"></span>
+                      <div>
+                        <strong>ALTA</strong>
+                        <p>Emergência imediata</p>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group-ambulancia">
+                <label for="sintomas">SINTOMAS (OPCIONAL)</label>
+                <textarea id="sintomas" class="textarea-ambulancia" rows="4" placeholder="Descreva brevemente o que está acontecendo..."></textarea>
+              </div>
+
+              <div class="form-group-ambulancia">
+                <label for="telefone">TELEFONE PARA CONTATO</label>
+                <input type="text" id="telefone" value="(11) 93489-6513" class="input-ambulancia">
+              </div>
+
+              <button type="button" class="btn-continuar-ambulancia">CONTINUAR</button>
+            </div>
+          </div>
+
+          <div class="ambulancia-info-column">
+            <div class="ambulancia-mapa">
+              <img src="./assets/imagemMaps.jpeg" alt="Mapa de localização" class="mapa-container">
+            </div>
+
+            <div class="ambulancia-cards">
+              <div class="info-card tempo-card">
+                <img src="./assets/iconeRelogio.png" alt="Relógio">
+                <div>
+                  <p class="card-label">Tempo estimado</p>
+                  <p class="card-value">10-15 MIN</p>
+                </div>
+              </div>
+              <div class="info-card valor-card">
+                <img src="./assets/iconeDinheiro.png" alt="Dinheiro">
+                <div>
+                  <p class="card-label">VALOR ESTIMADO</p>
+                  <p class="card-value">R$ 100</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-importante-box">
+              <h3>INFORMAÇÕES IMPORTANTES</h3>
+              <ul class="info-list">
+                <li>
+                  <img src="./assets/check.png" alt="Check">
+                  <span>Ambulância equipada 24h</span>
+                </li>
+                <li>
+                  <img src="./assets/check.png" alt="Check">
+                  <span>Veterinário a bordo</span>
+                </li>
+                <li>
+                  <img src="./assets/check.png" alt="Check">
+                  <span>Equipamento de primeiros socorros</span>
+                </li>
+                <li>
+                  <img src="./assets/check.png" alt="Check">
+                  <span>Transporte seguro e confortável</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="logoERedesRodape">
+      <div class="brand-wrapper">
+        <img class="logoRodape" src="./assets/logo.svg" alt="Logo Artemys">
+        <div class="nomeESloganRodape">
+          <p class="nomeProjetoRodape">Artemys</p>
+          <p class="sloganProjetoRodape">Conectando Quem Ama a Quem Cuida</p>
+        </div>
+      </div>
+      <ul class="listaRedesSociais">
+        <li>
+          <a href="https://github.com/Artemys-Site" target="_blank" rel="noopener noreferrer">
+            <img src="./assets/GitHub.png" alt="Github">Github
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/company/artemys-oficial/" target="_blank" rel="noopener noreferrer">
+            <img src="./assets/iconeInstagram.png" alt="Instagram">Instagram
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/seu-usuario" target="_blank" rel="noopener noreferrer">
+            <img src="./assets/LinkedIn.png" alt="LinkedIn">LinkedIn
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="diferenciais">
+      <ul class="listaDiferenciais">
+        <li><img src="./assets/iconeRelogio.png" alt="Relógio">Atendimento Rápido</li>
+        <li><img src="./assets/iconeEscudoDiferencial.png" alt="Escudo">Procedimentos Eficazes</li>
+        <li><img src="./assets/logoBrasil.png" alt="Brasil">Suporte em todo Brasil</li>
+      </ul>
+    </div>
+    <div class="direitosAutorias">
+      <img class="logoDireitosAutorais" src="./assets/iconeDireitosAutorais.png" alt="Direitos autorais">
+      <p class="conteudoDireitosAutorais">2025 Artemys. Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Adicionar Método de Pagamento - Artemys</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Adicionar método de pagamento Artemys">
+    <meta name="keywords" content="Veterinaria,Pets,Pagamento">
+    <meta name="author" content="Artemys">
+    <meta name="robots" content="index,follow">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Estilos específicos para a página de método de pagamento */
+        .pagamento-page {
+            margin-top: 90px;
+            padding: 40px 20px;
+            background-color: #F8F6FD;
+            min-height: calc(100vh - 90px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pagamento-modal {
+            background-color: #FFFFFF;
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+            position: relative;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .modal-titulo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #7A2FF5;
+            text-transform: uppercase;
+        }
+
+        .btn-fechar {
+            background-color: transparent;
+            border: none;
+            font-size: 24px;
+            color: #888888;
+            cursor: pointer;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .btn-fechar:hover {
+            background-color: #E6DFFF;
+            color: #7A2FF5;
+        }
+
+        .tipo-pagamento-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #E6DFFF;
+            padding-bottom: 0;
+        }
+
+        .tipo-pagamento-tab {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background-color: transparent;
+            border: none;
+            border-bottom: 3px solid transparent;
+            color: #6A4C9C;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-family: 'Ysabeau SC', sans-serif;
+            margin-bottom: -2px;
+        }
+
+        .tipo-pagamento-tab:hover {
+            color: #7A2FF5;
+        }
+
+        .tipo-pagamento-tab.active {
+            color: #FFFFFF;
+            background-color: #7A2FF5;
+            border-bottom-color: #7A2FF5;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .tipo-pagamento-tab img {
+            width: 18px;
+            height: 18px;
+        }
+
+        .form-pagamento {
+            display: none;
+        }
+
+        .form-pagamento.active {
+            display: block;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            color: #6A4C9C;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            font-family: Arial, sans-serif;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #E6DFFF;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            color: #3B2561;
+            background-color: #F8F6FD;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #7A2FF5;
+        }
+
+        .form-group input::placeholder {
+            color: #999999;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 15px;
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .btn-cancelar {
+            flex: 1;
+            background-color: #E6DFFF;
+            color: #6A4C9C;
+            border: none;
+            border-radius: 20px;
+            padding: 14px 24px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .btn-cancelar:hover {
+            background-color: #D0C5EC;
+        }
+
+        .btn-adicionar {
+            flex: 1;
+            background-color: #7A2FF5;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 20px;
+            padding: 14px 24px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .btn-adicionar:hover {
+            background-color: #6A4C9C;
+        }
+
+        @media (max-width: 768px) {
+            .pagamento-page {
+                margin-top: 70px;
+                padding: 20px 15px;
+            }
+
+            .pagamento-modal {
+                padding: 25px;
+            }
+
+            .modal-titulo {
+                font-size: 20px;
+            }
+
+            .tipo-pagamento-tabs {
+                flex-wrap: wrap;
+                gap: 5px;
+            }
+
+            .tipo-pagamento-tab {
+                padding: 10px 15px;
+                font-size: 12px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .form-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="nav-logo">
+                <a href="homeLogado.html">
+                    <img src="./assets/Vetorizado.svg" alt="Logo Artemys">
+                </a>
+                <div class="nav-logo-text">
+                    <span class="brand-name">ARTEMYS</span>
+                    <span class="brand-slogan">CONECTANDO QUEM AMA A QUEM CUIDA</span>
+                </div>
+            </div>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="homeLogado.html">Início</a></li>
+                <li><a href="artigo.html">Artigos</a></li>
+                <li><a href="planos.html">Planos de Assinatura</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+            </ul>
+
+            <div class="nav-user-actions">
+                <a href="perfil.html" class="action-icon" aria-label="Configurações">
+                    <img src="./assets/iconeConfiguracao.png" alt="Configurações">
+                </a>
+                <a href="#" class="action-icon" aria-label="Notificações">
+                    <img src="./assets/iconeNotificacao.png" alt="Notificações">
+                </a>
+
+                <div class="profile-container">
+                    <img src="./assets/perfilLogado.png" alt="Foto do Perfil" id="profile-pic-btn" class="profile-pic">
+                    <div class="profile-dropdown" id="profile-dropdown">
+                        <a href="perfil.html" class="dropdown-item">Ver Perfil</a>
+                        <a href="agendamento.html" class="dropdown-item">Agendamentos</a>
+                        <a href="index.html" class="dropdown-item">Sair</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="pagamento-page">
+            <div class="pagamento-modal">
+                <div class="modal-header">
+                    <h1 class="modal-titulo">ADICIONAR MÉTODO DE PAGAMENTO</h1>
+                    <button class="btn-fechar" onclick="voltarParaPerfil()" aria-label="Fechar">×</button>
+                </div>
+
+                <div class="tipo-pagamento-tabs">
+                    <button class="tipo-pagamento-tab active" data-tipo="credito">
+                        <img src="./assets/iconeDinheiro.png" alt="Crédito">
+                        <span>CRÉDITO</span>
+                    </button>
+                    <button class="tipo-pagamento-tab" data-tipo="debito">
+                        <img src="./assets/iconeDinheiro.png" alt="Débito">
+                        <span>DÉBITO</span>
+                    </button>
+                </div>
+
+                <!-- Formulário Crédito -->
+                <form id="form-credito" class="form-pagamento active">
+                    <div class="form-group">
+                        <label for="numero-cartao-credito">NÚMERO DO CARTÃO</label>
+                        <input type="text" id="numero-cartao-credito" placeholder="0000 0000 0000 0000" maxlength="19">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nome-titular-credito">NOME DO TITULAR</label>
+                        <input type="text" id="nome-titular-credito" placeholder="NOME COMO ESTÁ NO CARTÃO">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="validade-credito">VALIDADE</label>
+                            <input type="text" id="validade-credito" placeholder="MM/AA" maxlength="5">
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv-credito">CVV</label>
+                            <input type="text" id="cvv-credito" placeholder="123" maxlength="4">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bandeira-credito">BANDEIRA</label>
+                        <select id="bandeira-credito">
+                            <option value="">Selecione a bandeira</option>
+                            <option value="visa">Visa</option>
+                            <option value="mastercard">Mastercard</option>
+                            <option value="elo">Elo</option>
+                            <option value="amex">American Express</option>
+                        </select>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-cancelar" onclick="voltarParaPerfil()">CANCELAR</button>
+                        <button type="button" class="btn-adicionar" onclick="confirmarPagamento()">ADICIONAR</button>
+                    </div>
+                </form>
+
+                <!-- Formulário Débito -->
+                <form id="form-debito" class="form-pagamento">
+                    <div class="form-group">
+                        <label for="numero-cartao-debito">NÚMERO DO CARTÃO</label>
+                        <input type="text" id="numero-cartao-debito" placeholder="0000 0000 0000 0000" maxlength="19">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nome-titular-debito">NOME DO TITULAR</label>
+                        <input type="text" id="nome-titular-debito" placeholder="NOME COMO ESTÁ NO CARTÃO">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="validade-debito">VALIDADE</label>
+                            <input type="text" id="validade-debito" placeholder="MM/AA" maxlength="5">
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv-debito">CVV</label>
+                            <input type="text" id="cvv-debito" placeholder="123" maxlength="4">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bandeira-debito">BANDEIRA</label>
+                        <select id="bandeira-debito">
+                            <option value="">Selecione a bandeira</option>
+                            <option value="visa">Visa</option>
+                            <option value="mastercard">Mastercard</option>
+                            <option value="elo">Elo</option>
+                            <option value="amex">American Express</option>
+                        </select>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-cancelar" onclick="voltarParaPerfil()">CANCELAR</button>
+                        <button type="button" class="btn-adicionar" onclick="confirmarPagamento()">ADICIONAR</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="logoERedesRodape">
+            <div class="brand-wrapper">
+                <img class="logoRodape" src="./assets/logo.svg"
+                    alt="Logo de uma lua roxa crescente com um cachorro e um gato de cor laranja dentro da lua">
+                <div class="nomeESloganRodape">
+                    <p class="nomeProjetoRodape">Artemys</p>
+                    <p class="sloganProjetoRodape">Conectando Quem Ama a Quem Cuida</p>
+                </div>
+            </div>
+            <ul class="listaRedesSociais">
+                <li>
+                    <a href="https://github.com/Artemys-Site" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/GitHub.png" alt="logo do site github">Github
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/company/artemys-oficial/" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="./assets/iconeInstagram.png" alt="logo da rede social instagram">Instagram
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/seu-usuario" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/LinkedIn.png" alt="logo da rede social Linkedin">LinkedIn
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="diferenciais">
+            <ul class="listaDiferenciais">
+                <li><img src="./assets/iconeRelogio.png" alt="icone de um relogio">Atendimento Rápido</li>
+                <li><img src="./assets/iconeEscudoDiferencial.png"
+                        alt="icone de um escudo com um check dentro">Procedimentos Eficazes</li>
+                <li><img src="./assets/logoBrasil.png" alt="icone do mapa do Brasil">Suporte em todo Brasil</li>
+            </ul>
+        </div>
+        <div class="direitosAutorias">
+            <img class="logoDireitosAutorais" src="./assets/iconeDireitosAutorais.png" alt="icone de direitos autorais">
+            <p class="conteudoDireitosAutorais">2025 Artemys. Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Configurações - Artemys</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Configurações e perfil do usuário Artemys">
+    <meta name="keywords" content="Veterinaria,Pets,Perfil,Configurações">
+    <meta name="author" content="Artemys">
+    <meta name="robots" content="index,follow">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="nav-logo">
+                <a href="homeLogado.html">
+                    <img src="./assets/Vetorizado.svg" alt="Logo Artemys">
+                </a>
+                <div class="nav-logo-text">
+                    <span class="brand-name">ARTEMYS</span>
+                    <span class="brand-slogan">CONECTANDO QUEM AMA A QUEM CUIDA</span>
+                </div>
+            </div>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="homeLogado.html">Início</a></li>
+                <li><a href="artigo.html">Artigos</a></li>
+                <li><a href="planos.html">Planos de Assinatura</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+            </ul>
+
+            <div class="nav-user-actions">
+                <a href="perfil.html" class="action-icon" aria-label="Configurações">
+                    <img src="./assets/iconeConfiguracao.png" alt="Configurações">
+                </a>
+                <a href="#" class="action-icon" aria-label="Notificações">
+                    <img src="./assets/iconeNotificacao.png" alt="Notificações">
+                </a>
+
+                <div class="profile-container">
+                    <img src="./assets/perfilLogado.png" alt="Foto do Perfil" id="profile-pic-btn" class="profile-pic">
+                    <div class="profile-dropdown" id="profile-dropdown">
+                        <a href="perfil.html" class="dropdown-item">Ver Perfil</a>
+                        <a href="agendamento.html" class="dropdown-item">Agendamentos</a>
+                        <a href="index.html" class="dropdown-item">Sair</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="configuracoes-page">
+            <div class="configuracoes-container">
+                <div class="configuracoes-header">
+                    <h1 class="configuracoes-titulo">CONFIGURAÇÕES</h1>
+                    <p class="configuracoes-subtitulo">GERENCIE SUAS INFORMAÇÕES PESSOAIS E PREFERÊNCIAS</p>
+                </div>
+
+                <div class="configuracoes-tabs">
+                    <button class="config-tab active" data-tab="perfil">
+                        <img src="./assets/iconePerfilAvalia.png" alt="Perfil">
+                        <span>PERFIL</span>
+                    </button>
+                    <button class="config-tab" data-tab="historico">
+                        <img src="./assets/iconeCalendarioPreto.png" alt="Histórico">
+                        <span>HISTÓRICO</span>
+                    </button>
+                    <button class="config-tab" data-tab="pagamento">
+                        <img src="./assets/iconeDinheiro.png" alt="Pagamento">
+                        <span>PAGAMENTO</span>
+                    </button>
+                    <button class="config-tab" data-tab="notificacoes">
+                        <img src="./assets/iconeNotificacao.png" alt="Notificações">
+                        <span>NOTIFICAÇÕES</span>
+                    </button>
+                </div>
+
+                <!-- Conteúdo Perfil -->
+                <div id="perfil-content" class="config-content active">
+                    <div class="perfil-card">
+                        <div class="perfil-card-header">
+                            <div class="perfil-info">
+                                <img src="./assets/perfilLogado.png" alt="João Victor" class="perfil-foto">
+                                <div>
+                                    <h2 class="perfil-nome">João Victor</h2>
+                                    <p class="perfil-tipo">Tutor</p>
+                                </div>
+                            </div>
+                            <button class="btn-editar-perfil">
+                                <img src="./assets/iconeConfirmar.png" alt="Editar">
+                                <span>Editar Perfil</span>
+                            </button>
+                        </div>
+                        <div class="perfil-card-body">
+                            <div class="perfil-grid">
+                                <div class="perfil-campo">
+                                    <label>Nome Completo</label>
+                                    <input type="text" value="João Victor Lima Dos Santos Nevaça" readonly>
+                                </div>
+                                <div class="perfil-campo">
+                                    <label>Gênero</label>
+                                    <select disabled>
+                                        <option selected>Masculino</option>
+                                        <option>Feminino</option>
+                                        <option>Outro</option>
+                                    </select>
+                                </div>
+                                <div class="perfil-campo">
+                                    <label>CPF</label>
+                                    <input type="text" value="123.456.789-00" readonly>
+                                </div>
+                                <div class="perfil-campo">
+                                    <label>Email</label>
+                                    <input type="email" value="joao.victor@email.com" readonly>
+                                </div>
+                                <div class="perfil-campo">
+                                    <label>Data de Nascimento</label>
+                                    <input type="text" value="15/03/1995" readonly>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pets-section">
+                        <div class="pets-section-header">
+                            <div>
+                                <h2 class="pets-section-titulo">MEU(S) PET(S)</h2>
+                                <p class="pets-section-subtitulo">GERENCIE AS INFORMAÇÕES DOS SEUS COMPANHEIROS</p>
+                            </div>
+                            <a href="cadrastopet.html" class="btn-cadastrar-pet" style="text-decoration: none; display: inline-flex;">
+                                <span>+</span>
+                                <span>Cadastrar Pet</span>
+                            </a>
+                        </div>
+
+                        <div class="pets-grid">
+                            <div class="pet-card">
+                                <div class="pet-card-header">
+                                    <div class="pet-info">
+                                        <img src="./assets/fotoBob.jpeg" alt="Bob" class="pet-foto">
+                                        <div>
+                                            <h3 class="pet-nome">Bob</h3>
+                                            <p class="pet-tipo">Cão - Golden Retriever</p>
+                                        </div>
+                                    </div>
+                                    <button class="btn-editar-pet">
+                                        <img src="./assets/iconeConfirmar.png" alt="Editar">
+                                    </button>
+                                </div>
+                                <div class="pet-card-body">
+                                    <div class="pet-detalhes">
+                                        <div class="pet-detalhe-item"><strong>Data de Nascimento:</strong> 12/05/2020</div>
+                                        <div class="pet-detalhe-item"><strong>Microchip:</strong> 123.456.789</div>
+                                        <div class="pet-detalhe-item"><strong>Raça:</strong> Golden Retriever</div>
+                                        <div class="pet-detalhe-item"><strong>Sexo:</strong> Macho</div>
+                                        <div class="pet-detalhe-item"><strong>Porte:</strong> Grande</div>
+                                        <div class="pet-detalhe-item"><strong>Peso:</strong> 14 Kg</div>
+                                        <div class="pet-detalhe-item"><strong>Cor:</strong> Laranja</div>
+                                    </div>
+                                    <button class="btn-mais-detalhes">Mais Detalhes ></button>
+                                </div>
+                            </div>
+
+                            <div class="pet-card">
+                                <div class="pet-card-header">
+                                    <div class="pet-info">
+                                        <img src="./assets/fotoMila.jpg" alt="Mila" class="pet-foto">
+                                        <div>
+                                            <h3 class="pet-nome">Mila</h3>
+                                            <p class="pet-tipo">Gato - SRD</p>
+                                        </div>
+                                    </div>
+                                    <button class="btn-editar-pet">
+                                        <img src="./assets/iconeConfirmar.png" alt="Editar">
+                                    </button>
+                                </div>
+                                <div class="pet-card-body">
+                                    <div class="pet-detalhes">
+                                        <div class="pet-detalhe-item"><strong>Data de Nascimento:</strong> 12/05/2020</div>
+                                        <div class="pet-detalhe-item"><strong>Microchip:</strong> 123.456.789</div>
+                                        <div class="pet-detalhe-item"><strong>Raça:</strong> SRD</div>
+                                        <div class="pet-detalhe-item"><strong>Sexo:</strong> Fêmea</div>
+                                        <div class="pet-detalhe-item"><strong>Porte:</strong> Pequeno</div>
+                                        <div class="pet-detalhe-item"><strong>Peso:</strong> 5 Kg</div>
+                                        <div class="pet-detalhe-item"><strong>Cor:</strong> Laranja</div>
+                                    </div>
+                                    <button class="btn-mais-detalhes">Mais Detalhes ></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Conteúdo Histórico -->
+                <div id="historico-content" class="config-content">
+                    <div class="historico-card">
+                        <h2 class="historico-titulo">HISTÓRICO DE SERVIÇOS</h2>
+                        
+                        <div class="historico-item">
+                            <div class="historico-info">
+                                <div class="historico-servico">Consulta Veterinária</div>
+                                <div class="historico-detalhes">08/11/2025 • REX</div>
+                                <div class="historico-veterinario">DR(A). CARLOS MENDES</div>
+                            </div>
+                            <div class="historico-status">
+                                <span class="status-badge status-concluido">CONCLUÍDO</span>
+                                <span class="historico-preco">R$ 180,00</span>
+                            </div>
+                        </div>
+
+                        <div class="historico-item">
+                            <div class="historico-info">
+                                <div class="historico-servico">Vacinação</div>
+                                <div class="historico-detalhes">15/11/2025 • LUNA</div>
+                                <div class="historico-veterinario">DR(A). ANA SANTOS</div>
+                            </div>
+                            <div class="historico-status">
+                                <span class="status-badge status-agendado">AGENDADO</span>
+                                <span class="historico-preco">R$ 120,00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Conteúdo Pagamento -->
+                <div id="pagamento-content" class="config-content">
+                    <div class="pagamento-card">
+                        <h2 class="pagamento-titulo">MÉTODOS DE PAGAMENTO</h2>
+                        
+                        <div class="metodo-pagamento ativo">
+                            <div class="metodo-info">
+                                <img src="./assets/iconeDinheiro.png" alt="Cartão">
+                                <div class="metodo-detalhes">
+                                    <h4>Cartão de Crédito</h4>
+                                    <p>**** **** **** 1234</p>
+                                </div>
+                            </div>
+                            <button class="btn-editar-perfil" style="background-color: transparent; color: #7A2FF5; padding: 5px;">
+                                <img src="./assets/iconeConfirmar.png" alt="Editar">
+                            </button>
+                        </div>
+
+                        <a href="metodopagamento.html" class="btn-adicionar-pagamento" style="text-decoration: none; display: inline-flex;">
+                            <span>+</span>
+                            <span>Adicionar Método de Pagamento</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Conteúdo Notificações -->
+                <div id="notificacoes-content" class="config-content">
+                    <div class="notificacoes-card">
+                        <h2 class="notificacoes-titulo">PREFERÊNCIAS DE NOTIFICAÇÃO</h2>
+                        
+                        <div class="notificacao-item">
+                            <div class="notificacao-info">
+                                <div class="notificacao-titulo">E-MAIL DE AGENDAMENTO</div>
+                                <div class="notificacao-descricao">RECEBA CONFIRMAÇÕES DE CONSULTAS POR E-MAIL</div>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+
+                        <div class="notificacao-item">
+                            <div class="notificacao-info">
+                                <div class="notificacao-titulo">SMS DE LEMBRETE</div>
+                                <div class="notificacao-descricao">LEMBRETES DE CONSULTAS 24H ANTES</div>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+
+                        <div class="notificacao-item">
+                            <div class="notificacao-info">
+                                <div class="notificacao-titulo">PUSH DE EMERGÊNCIA</div>
+                                <div class="notificacao-descricao">NOTIFICAÇÕES URGENTES SOBRE SEUS PETS</div>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+
+                        <div class="notificacao-item">
+                            <div class="notificacao-info">
+                                <div class="notificacao-titulo">WHATSAPP CONFIRMAÇÃO</div>
+                                <div class="notificacao-descricao">CONFIRMAÇÕES VIA WHATSAPP</div>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+
+                        <div class="notificacao-item">
+                            <div class="notificacao-info">
+                                <div class="notificacao-titulo">E-MAILS PROMOCIONAIS</div>
+                                <div class="notificacao-descricao">OFERTAS E NOVIDADES SOBRE SERVIÇOS</div>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="logoERedesRodape">
+            <div class="brand-wrapper">
+                <img class="logoRodape" src="./assets/logo.svg"
+                    alt="Logo de uma lua roxa crescente com um cachorro e um gato de cor laranja dentro da lua">
+                <div class="nomeESloganRodape">
+                    <p class="nomeProjetoRodape">Artemys</p>
+                    <p class="sloganProjetoRodape">Conectando Quem Ama a Quem Cuida</p>
+                </div>
+            </div>
+            <ul class="listaRedesSociais">
+                <li>
+                    <a href="https://github.com/Artemys-Site" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/GitHub.png" alt="logo do site github">Github
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/company/artemys-oficial/" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="./assets/iconeInstagram.png" alt="logo da rede social instagram">Instagram
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/seu-usuario" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/LinkedIn.png" alt="logo da rede social Linkedin">LinkedIn
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="diferenciais">
+            <ul class="listaDiferenciais">
+                <li><img src="./assets/iconeRelogio.png" alt="icone de um relogio">Atendimento Rápido</li>
+                <li><img src="./assets/iconeEscudoDiferencial.png"
+                        alt="icone de um escudo com um check dentro">Procedimentos Eficazes</li>
+                <li><img src="./assets/logoBrasil.png" alt="icone do mapa do Brasil">Suporte em todo Brasil</li>
+            </ul>
+        </div>
+        <div class="direitosAutorias">
+            <img class="logoDireitosAutorais" src="./assets/iconeDireitosAutorais.png" alt="icone de direitos autorais">
+            <p class="conteudoDireitosAutorais">2025 Artemys. Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

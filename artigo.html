@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Artigos - Artemys</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Artigos e guias de primeiros socorros para pets">
+    <meta name="keywords" content="Veterinaria,Pets,Emergência,Artigos,Primeiros Socorros">
+    <meta name="author" content="Artemys">
+    <meta name="robots" content="index,follow">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="nav-logo">
+                <a href="homeLogado.html">
+                    <img src="./assets/Vetorizado.svg" alt="Logo Artemys">
+                </a>
+                <div class="nav-logo-text">
+                    <span class="brand-name">ARTEMYS</span>
+                    <span class="brand-slogan">CONECTANDO QUEM AMA A QUEM CUIDA</span>
+                </div>
+            </div>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="homeLogado.html">Início</a></li>
+                <li><a href="artigo.html" class="active">Artigos</a></li>
+                <li><a href="planos.html">Planos de Assinatura</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+            </ul>
+
+            <div class="nav-user-actions">
+                <a href="#" class="action-icon" aria-label="Configurações">
+                    <img src="./assets/iconeConfiguracao.png" alt="Configurações">
+                </a>
+                <a href="#" class="action-icon" aria-label="Notificações">
+                    <img src="./assets/iconeNotificacao.png" alt="Notificações">
+                </a>
+
+                <div class="profile-container">
+                    <img src="./assets/perfilLogado.png" alt="Foto do Perfil" id="profile-pic-btn" class="profile-pic">
+                    <div class="profile-dropdown" id="profile-dropdown">
+                        <a href="perfil.html" class="dropdown-item">Ver Perfil</a>
+                        <a href="agendamento.html" class="dropdown-item">Agendamentos</a>
+                        <a href="index.html" class="dropdown-item">Sair</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Lista de Artigos/Guias -->
+    <section class="artigos-page" id="artigos-lista">
+        <div class="artigos-container">
+            <div class="artigos-nav">
+                <button class="artigos-nav-btn active" data-tipo="artigos">Artigos</button>
+                <button class="artigos-nav-btn" data-tipo="guias">Guias de Primeiros Socorros</button>
+            </div>
+
+            <div id="conteudo-artigos">
+                <h1 class="artigos-titulo">ARTIGOS</h1>
+                <p class="artigos-subtitulo">Conteúdo educativo para o cuidado do seu pet</p>
+
+                <div class="filtros-container">
+                    <button class="filtro-btn">
+                        <img src="./assets/iconeEscudoPreto.png" alt="Primeiros Socorros">
+                        <span>Primeiros Socorros</span>
+                    </button>
+                    <button class="filtro-btn">
+                        <img src="./assets/iconeFavpreto.png" alt="Prevenção">
+                        <span>Prevenção</span>
+                    </button>
+                    <button class="filtro-btn">
+                        <img src="./assets/iconePatapreta.png" alt="Cão">
+                        <span>Cão</span>
+                    </button>
+                    <button class="filtro-btn">
+                        <img src="./assets/iconeGato.png" alt="Gato">
+                        <span>Gato</span>
+                    </button>
+                </div>
+
+                <div class="artigos-grid" id="grid-artigos">
+                    <!-- Artigos serão inseridos aqui via JavaScript -->
+                </div>
+            </div>
+
+            <div id="conteudo-guias" style="display: none;">
+                <h1 class="artigos-titulo">GUIAS DE PRIMEIROS SOCORROS</h1>
+                <p class="artigos-subtitulo">Aprenda a agir com segurança e carinho</p>
+
+                <div class="filtros-container">
+                    <button class="filtro-btn">
+                        <img src="./assets/iconeEscudoPreto.png" alt="Primeiros Socorros">
+                        <span>Primeiros Socorros</span>
+                    </button>
+                    <button class="filtro-btn">
+                        <img src="./assets/iconeFavpreto.png" alt="Prevenção">
+                        <span>Prevenção</span>
+                    </button>
+                    <button class="filtro-btn">
+                        <img src="./assets/iconePatapreta.png" alt="Cão">
+                        <span>Cão</span>
+                    </button>
+                    <button class="filtro-btn">
+                        <img src="./assets/iconeGato.png" alt="Gato">
+                        <span>Gato</span>
+                    </button>
+                </div>
+
+                <div class="artigos-grid" id="grid-guias">
+                    <!-- Guias serão inseridos aqui via JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artigo Completo -->
+    <section class="artigo-completo" id="artigo-completo">
+        <div class="artigo-completo-container">
+            <div class="artigo-completo-main">
+                <div class="artigo-meta">
+                    <div class="artigo-tempo-leitura">
+                        <img src="./assets/Book.png" alt="Livro">
+                        <span>7 MINUTOS DE LEITURA</span>
+                    </div>
+                    <button class="btn-ler-complemento">LER COMPLEMENTO</button>
+                    <button class="btn-salvar-conteudo">
+                        <span>+</span>
+                        <span>SALVAR CONTEÚDO</span>
+                    </button>
+                </div>
+
+                <div class="artigo-autor-info">
+                    <img src="./assets/draMarina.png" alt="Dra. Sofia Menenzes" class="artigo-autor-foto">
+                    <p class="artigo-autor-texto">POR DRA. SOFIA MENENZES • ATUALIZADO HÁ 2 MESES</p>
+                </div>
+
+                <h1 class="artigo-titulo-completo" id="artigo-titulo-completo">ENGASGOS EM CÃES E GATOS: O QUE FAZER IMEDIATAMENTE</h1>
+
+                <img src="./assets/imagemGuia2.png" alt="Cachorro" class="artigo-imagem-principal" id="artigo-imagem-principal">
+
+                <div class="artigo-alerta">
+                    <img src="./assets/iconeAlerta.png" alt="Alerta">
+                    <p class="artigo-alerta-texto">
+                        MANTENHA A CALMA. SE O PET NÃO CONSEGUE RESPIRAR, NÃO PERCA TEMPO: INICIE AS MANOBRAS E PROCURE ASSISTÊNCIA VETERINÁRIA O QUANTO ANTES.
+                    </p>
+                </div>
+
+                <div class="artigo-secao">
+                    <h2 class="artigo-secao-titulo">SINAIS DE ALERTA</h2>
+                    <p class="artigo-secao-conteudo">
+                        TOSSE PERSISTENTE, BOCA ABERTA COM TENTATIVA DE RESPIRAR, GENGIVAS ARROXADAS, SALIVAÇÃO EXCESSIVA, PATAS NA BOCA, DESMAIO.
+                    </p>
+                </div>
+
+                <div class="artigo-secao">
+                    <h2 class="artigo-secao-titulo">SEGURANÇA PRIMEIRO</h2>
+                    <p class="artigo-secao-conteudo">
+                        NUNCA COLOQUE OS DEDOS CEGAMENTE NA BOCA DO ANIMAL. SE ENTERRAR O OBJETO, TENTE REMOVER COM CUIDADO USANDO UMA PINÇA. EVITE CAUSAR LESÕES.
+                    </p>
+                </div>
+
+                <div class="artigo-secao">
+                    <h2 class="artigo-secao-titulo">PASSO A PASSO</h2>
+
+                    <div class="artigo-passo">
+                        <div class="artigo-passo-numero">1</div>
+                        <div class="artigo-passo-conteudo">
+                            <h3 class="artigo-passo-titulo">AVALIE A RESPIRAÇÃO</h3>
+                            <p class="artigo-passo-texto">
+                                OBSERVE TÓRAX E FLUXO DE AR PELO NARIZ. SE NÃO RESPIRAR E NÃO HOUVER PULSO, PRIORIZE RCP.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="artigo-passo">
+                        <div class="artigo-passo-numero">2</div>
+                        <div class="artigo-passo-conteudo">
+                            <h3 class="artigo-passo-titulo">REMOÇÃO VISÍVEL</h3>
+                            <p class="artigo-passo-texto">
+                                ABRA A BOCA COM CUIDADO E, SE O OBJETO ESTIVER EVIDENTE, RETIRE-O COM PINÇA OU COM OS DEDOS EM PINÇA.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="artigo-passo">
+                        <div class="artigo-passo-numero">3</div>
+                        <div class="artigo-passo-conteudo">
+                            <h3 class="artigo-passo-titulo">GOLPES INTERESCAPULARES</h3>
+                            <p class="artigo-passo-texto">
+                                COM O PET DE LADO, APLIQUE 5 GOLPES FIRMES ENTRE AS ESCÁPULAS COM A PALMA DA MÃO.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="artigo-passo">
+                        <div class="artigo-passo-numero">4</div>
+                        <div class="artigo-passo-conteudo">
+                            <h3 class="artigo-passo-titulo">MANOBRAS DE HEIMLICH ADAPTADA</h3>
+                            <p class="artigo-passo-texto">
+                                PARA CÃES MÉDIOS/GRANDES: ABRAÇE A CAIXA TORÁCICA ABAIXO DAS COSTELAS E PRESSIONE PARA CIMA E PARA FRENTE 3-5 VEZES. PARA CÃES PEQUENOS E GATOS: COMPRESSÕES SUAVES NO ABDÔMEN.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="artigo-passo">
+                        <div class="artigo-passo-numero">5</div>
+                        <div class="artigo-passo-conteudo">
+                            <h3 class="artigo-passo-titulo">REAVALIE E REPITA</h3>
+                            <p class="artigo-passo-texto">
+                                VERIFIQUE SE O OBJETO SAIU. REPITA GOLPES/COMPRESSÕES SE NECESSÁRIO E MANTENHA O PET ENCAMINHADO AO VETERINÁRIO.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="artigo-secao">
+                    <h2 class="artigo-secao-titulo">APÓS O EPISÓDIO</h2>
+                    <p class="artigo-secao-conteudo">
+                        MESMO QUE O OBJETO SEJA EXPELIDO, LEVE O ANIMAL AO VETERINÁRIO PARA CHECAR POSSÍVEIS LESÕES EM GARGANTA E PULMÕES.
+                    </p>
+                </div>
+
+                <div class="artigo-secao">
+                    <h2 class="artigo-secao-titulo">PREVENÇÃO</h2>
+                    <p class="artigo-secao-conteudo">
+                        OFEREÇA BRINQUEDOS DO TAMANHO ADEQUADO, EVITE OSSOS QUEBRADIÇOS E MANTENHA ITENS PEQUENOS FORA DO ALCANCE.
+                    </p>
+                </div>
+
+                <div class="artigo-botoes-acoes">
+                    <button class="btn-voltar" onclick="voltarParaLista()">
+                        <img src="./assets/iconeVoltar.png" alt="Voltar">
+                        <span>VOLTAR</span>
+                    </button>
+                    <button class="btn-chamar-ambulancia-footer">CHAMAR AMBULÂNCIA</button>
+                </div>
+            </div>
+
+            <div class="artigo-sidebar">
+                <div class="sidebar-card">
+                    <h3 class="sidebar-card-titulo">NESTE GUIA</h3>
+                    <ul class="sidebar-lista">
+                        <li><a href="#" class="active">SINAIS DE ALERTA</a></li>
+                        <li><a href="#">SEGURANÇA PRIMEIRO</a></li>
+                        <li><a href="#">PASSO A PASSO</a></li>
+                        <li><a href="#">APÓS O EPISÓDIO</a></li>
+                        <li><a href="#">PREVENÇÃO</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-card sidebar-emergencia">
+                    <h3 class="sidebar-card-titulo">EM EMERGÊNCIA?</h3>
+                    <p class="sidebar-emergencia-texto">
+                        SE O PET ESTÁ COM PROBLEMAS SEVEROS, INICIE RCP E SE DIRIJA-SE À CLÍNICA MAIS PRÓXIMA.
+                    </p>
+                    <p class="sidebar-emergencia-texto">
+                        CASO TENHA SEU PLANO, INICIE O CHAMADO PARA CONTATAR UMA AMBULANCIA DE EMERGÊNCIA
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 10px; margin-top: 15px;">
+                        <img src="./assets/draMarina.png" alt="Dra. Sofia" style="width: 40px; height: 40px; border-radius: 50%;">
+                        <button class="btn-chamar-ambulancia">ENTRAR EM CHAMADO</button>
+                    </div>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3 class="sidebar-card-titulo">AUTOR</h3>
+                    <div class="sidebar-autor">
+                        <div class="sidebar-autor-icon">
+                            <img src="./assets/iconeCapelo.png" alt="Ícone" style="width: 24px; height: 24px;">
+                        </div>
+                        <p class="sidebar-autor-texto">DRA. SOFIA MENENZES | CRMV 12345</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="logoERedesRodape">
+            <div class="brand-wrapper">
+                <img class="logoRodape" src="./assets/logo.svg"
+                    alt="Logo de uma lua roxa crescente com um cachorro e um gato de cor laranja dentro da lua">
+                <div class="nomeESloganRodape">
+                    <p class="nomeProjetoRodape">Artemys</p>
+                    <p class="sloganProjetoRodape">Conectando Quem Ama a Quem Cuida</p>
+                </div>
+            </div>
+            <ul class="listaRedesSociais">
+                <li>
+                    <a href="https://github.com/Artemys-Site" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/GitHub.png" alt="logo do site github">Github
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/company/artemys-oficial/" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="./assets/iconeInstagram.png" alt="logo da rede social instagram">Instagram
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/seu-usuario" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/LinkedIn.png" alt="logo da rede social Linkedin">LinkedIn
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="diferenciais">
+            <ul class="listaDiferenciais">
+                <li><img src="./assets/iconeRelogio.png" alt="icone de um relogio">Atendimento Rápido</li>
+                <li><img src="./assets/iconeEscudoDiferencial.png"
+                        alt="icone de um escudo com um check dentro">Procedimentos Eficazes</li>
+                <li><img src="./assets/logoBrasil.png" alt="icone do mapa do Brasil">Suporte em todo Brasil</li>
+            </ul>
+        </div>
+        <div class="direitosAutorias">
+            <img class="logoDireitosAutorais" src="./assets/iconeDireitosAutorais.png" alt="icone de direitos autorais">
+            <p class="conteudoDireitosAutorais">2025 Artemys. Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
+

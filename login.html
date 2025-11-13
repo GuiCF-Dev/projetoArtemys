@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artemys Login</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="./assets/Vetorizado.svg" alt="Logo Artemys">
+                </a>
+                <div class="nav-logo-text">
+                    <span class="brand-name">ARTEMYS</span>
+                    <span class="brand-slogan">CONECTANDO QUEM AMA A QUEM CUIDA</span>
+                </div>
+            </div>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="artigoD.html">Artigos</a></li>
+                <li><a href="planoD.html">Planos de Assinatura</a></li>
+                <li><a href="sobreD.html">Sobre Nós</a></li>
+                <li><a href="servicosD.html">Serviços</a></li>
+                <li class="mobile-auth-buttons">
+                    <a href="homeLogado.html" class="mobile-btn-entrar">Entrar</a>
+                    <a href="homeLogado.html" class="mobile-btn-cadastrar">Cadastrar</a>
+                </li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="btn-login"><a href="homeLogado.html">Entrar</a></button>
+                <button class="btn-signup"><a href="cadrasto.html">Cadastrar</a></button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="login-container">
+        <h1 class="login-page-title">FAÇA SEU LOGIN</h1>
+        
+        <div class="login-card">
+            <main class="login-content">
+                <section class="account-type-section">
+                    <h2>TIPO DE CONTA</h2>
+                    <div class="account-options">
+                        <div class="account-option" data-value="tutor">
+                            <span class="option-bullet"></span>
+                            <span class="option-text">TUTOR</span>
+                        </div>
+                        <div class="account-option" data-value="clinica">
+                            <span class="option-bullet"></span>
+                            <span class="option-text">CLÍNICA</span>
+                        </div>
+                        <div class="account-option" data-value="veterinario">
+                            <span class="option-bullet"></span>
+                            <span class="option-text">VETERINÁRIO</span>
+                        </div>
+                        <div class="account-option" data-value="ambulancia">
+                            <span class="option-bullet"></span>
+                            <span class="option-text">AMBULÂNCIA</span>
+                        </div>
+                    </div>
+                </section>
+                
+                <form class="login-form" id="loginForm">
+                    <div class="form-group">
+                        <label for="email">EMAIL</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">SENHA</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    
+                    <div class="forgot-password-section">
+                        <a href="recuperar-senha.html" class="forgot-link">ESQUECEU A SENHA?</a>
+                    </div>
+                    
+                    <button type="submit" class="login-button">ENTRAR</button>
+                </form>
+                
+                <div class="register-section">
+                    <p>NÃO TEM UMA CONTA? <a href="cadrasto.html" class="register-link">CADASTRE-SE AQUI</a></p>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 

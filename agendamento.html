@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Meus Agendamentos - Artemys</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meus agendamentos Artemys">
+    <meta name="keywords" content="Veterinaria,Pets,Agendamentos">
+    <meta name="author" content="Artemys">
+    <meta name="robots" content="index,follow">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="nav-logo">
+                <a href="homeLogado.html">
+                    <img src="./assets/Vetorizado.svg" alt="Logo Artemys">
+                </a>
+                <div class="nav-logo-text">
+                    <span class="brand-name">ARTEMYS</span>
+                    <span class="brand-slogan">CONECTANDO QUEM AMA A QUEM CUIDA</span>
+                </div>
+            </div>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="homeLogado.html">Início</a></li>
+                <li><a href="artigo.html">Artigos</a></li>
+                <li><a href="planos.html">Planos de Assinatura</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+            </ul>
+
+            <div class="nav-user-actions">
+                <a href="perfil.html" class="action-icon" aria-label="Configurações">
+                    <img src="./assets/iconeConfiguracao.png" alt="Configurações">
+                </a>
+                <a href="#" class="action-icon" aria-label="Notificações">
+                    <img src="./assets/iconeNotificacao.png" alt="Notificações">
+                </a>
+
+                <div class="profile-container">
+                    <img src="./assets/perfilLogado.png" alt="Foto do Perfil" id="profile-pic-btn" class="profile-pic">
+                    <div class="profile-dropdown" id="profile-dropdown">
+                        <a href="perfil.html" class="dropdown-item">Ver Perfil</a>
+                        <a href="agendamento.html" class="dropdown-item">Agendamentos</a>
+                        <a href="index.html" class="dropdown-item">Sair</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="agendamentos-page">
+            <div class="agendamentos-container">
+                <a href="perfil.html" class="btn-voltar-agendamentos">
+                    <img src="./assets/iconeVoltar.png" alt="Voltar">
+                    <span>VOLTAR</span>
+                </a>
+
+                <div class="agendamentos-header">
+                    <div class="agendamentos-title-wrapper">
+                        <img src="./assets/iconeCalendario.png" alt="Calendário" class="agendamentos-icon">
+                        <div>
+                            <h1 class="agendamentos-title">Meus Agendamentos</h1>
+                            <p class="agendamentos-subtitle">Acompanhe todas as suas consultas veterinárias</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="agendamentos-tabs">
+                    <button class="agendamento-tab active" data-tab="proximos">
+                        <div class="tab-content">
+                            <span class="tab-label">Próximos</span>
+                            <span class="tab-count">1</span>
+                        </div>
+                        <div class="tab-icon proximos-icon">
+                            <img src="./assets/iconCloack.png" alt="Relógio">
+                        </div>
+                    </button>
+                    <button class="agendamento-tab" data-tab="concluidos">
+                        <div class="tab-content">
+                            <span class="tab-label">Concluídos</span>
+                            <span class="tab-count">1</span>
+                        </div>
+                        <div class="tab-icon concluidos-icon">
+                            <img src="./assets/check.png" alt="Check">
+                        </div>
+                    </button>
+                    <button class="agendamento-tab" data-tab="cancelados">
+                        <div class="tab-content">
+                            <span class="tab-label">Cancelados</span>
+                            <span class="tab-count">1</span>
+                        </div>
+                        <div class="tab-icon cancelados-icon">
+                            <img src="./assets/X.png" alt="X">
+                        </div>
+                    </button>
+                </div>
+
+                <div class="agendamentos-list">
+                    <div class="agendamento-card proximo" data-status="proximos">
+                        <div class="agendamento-icon-left">
+                            <img src="./assets/Nurse.png" alt="Estetoscópio">
+                        </div>
+                        <div class="agendamento-content">
+                            <div class="agendamento-header">
+                                <div class="agendamento-info">
+                                    <h3 class="agendamento-veterinario">Dr. Ana Paula Silva</h3>
+                                    <p class="agendamento-especialidade">Clínica Geral</p>
+                                </div>
+                                <div class="agendamento-hora">
+                                    <img src="./assets/iconCloack.png" alt="Horário">
+                                    <span>14:00</span>
+                                </div>
+                            </div>
+                            <div class="agendamento-details">
+                                <div class="agendamento-detail-item">
+                                    <img src="./assets/iconeCalendarioPreto.png" alt="Data">
+                                    <span>27 de outubro de 2025</span>
+                                </div>
+                                <div class="agendamento-detail-item">
+                                    <img src="./assets/iconeCoracaoPreto.png" alt="Pet">
+                                    <span>Rex (Cachorro)</span>
+                                </div>
+                                <div class="agendamento-detail-item">
+                                    <span class="agendamento-tipo">Consulta Geral</span>
+                                    <span class="agendamento-preco">• R$ 150</span>
+                                </div>
+                            </div>
+                            <div class="agendamento-tags-wrapper">
+                                <div class="agendamento-tags">
+                                    <span class="tag-agendado">Agendado</span>
+                                    <span class="tag-teleatendimento">Teleatendimento</span>
+                                </div>
+                                <div class="agendamento-actions">
+                                    <button class="btn-entrar">
+                                        <img src="./assets/iconSearch.png" alt="Entrar">
+                                        <span>Entrar</span>
+                                    </button>
+                                    <button class="btn-detalhes">
+                                        <img src="./assets/Book.png" alt="Detalhes">
+                                        <span>Detalhes</span>
+                                    </button>
+                                    <button class="btn-menu-options">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="agendamento-card concluido" data-status="concluidos">
+                        <div class="agendamento-icon-left">
+                            <img src="./assets/Nurse.png" alt="Estetoscópio">
+                        </div>
+                        <div class="agendamento-content">
+                            <div class="agendamento-header">
+                                <div class="agendamento-info">
+                                    <h3 class="agendamento-veterinario">Dr. Ana Paula Silva</h3>
+                                    <p class="agendamento-especialidade">Clínica Geral</p>
+                                </div>
+                                <div class="agendamento-hora">
+                                    <img src="./assets/iconCloack.png" alt="Horário">
+                                    <span>14:30</span>
+                                </div>
+                            </div>
+                            <div class="agendamento-details">
+                                <div class="agendamento-detail-item">
+                                    <img src="./assets/iconeCalendarioPreto.png" alt="Data">
+                                    <span>23 de outubro de 2025</span>
+                                </div>
+                                <div class="agendamento-detail-item">
+                                    <img src="./assets/iconeCoracaoPreto.png" alt="Pet">
+                                    <span>Rex (Cachorro)</span>
+                                </div>
+                                <div class="agendamento-detail-item">
+                                    <span class="agendamento-tipo">Consulta Geral</span>
+                                    <span class="agendamento-preco">• R$ 150</span>
+                                </div>
+                            </div>
+                            <div class="agendamento-tags-wrapper">
+                                <div class="agendamento-tags">
+                                    <span class="tag-concluido">Concluído</span>
+                                    <span class="tag-teleatendimento">Teleatendimento</span>
+                                </div>
+                                <div class="agendamento-actions">
+                                    <button class="btn-detalhes">
+                                        <img src="./assets/Book.png" alt="Detalhes">
+                                        <span>Detalhes</span>
+                                    </button>
+                                    <button class="btn-menu-options">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="agendamento-card cancelado" data-status="cancelados">
+                        <div class="agendamento-icon-left">
+                            <img src="./assets/Nurse.png" alt="Estetoscópio">
+                        </div>
+                        <div class="agendamento-content">
+                            <div class="agendamento-header">
+                                <div class="agendamento-info">
+                                    <h3 class="agendamento-veterinario">Dr. Ana Paula Silva</h3>
+                                    <p class="agendamento-especialidade">Clínica Geral</p>
+                                </div>
+                                <div class="agendamento-hora">
+                                    <img src="./assets/iconCloack.png" alt="Horário">
+                                    <span>11:30</span>
+                                </div>
+                            </div>
+                            <div class="agendamento-details">
+                                <div class="agendamento-detail-item">
+                                    <img src="./assets/iconeCalendarioPreto.png" alt="Data">
+                                    <span>27 de outubro de 2025</span>
+                                </div>
+                                <div class="agendamento-detail-item">
+                                    <img src="./assets/iconeCoracaoPreto.png" alt="Pet">
+                                    <span>Rex (Cachorro)</span>
+                                </div>
+                                <div class="agendamento-detail-item">
+                                    <span class="agendamento-tipo">Consulta Geral</span>
+                                    <span class="agendamento-preco">• R$ 150</span>
+                                </div>
+                            </div>
+                            <div class="agendamento-tags-wrapper">
+                                <div class="agendamento-tags">
+                                    <span class="tag-cancelado">Cancelado</span>
+                                    <span class="tag-teleatendimento">Teleatendimento</span>
+                                </div>
+                                <div class="agendamento-actions">
+                                    <button class="btn-menu-options">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="logoERedesRodape">
+            <div class="brand-wrapper">
+                <img class="logoRodape" src="./assets/logo.svg"
+                    alt="Logo de uma lua roxa crescente com um cachorro e um gato de cor laranja dentro da lua">
+                <div class="nomeESloganRodape">
+                    <p class="nomeProjetoRodape">Artemys</p>
+                    <p class="sloganProjetoRodape">Conectando Quem Ama a Quem Cuida</p>
+                </div>
+            </div>
+            <ul class="listaRedesSociais">
+                <li>
+                    <a href="https://github.com/Artemys-Site" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/GitHub.png" alt="logo do site github">Github
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/company/artemys-oficial/" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="./assets/iconeInstagram.png" alt="logo da rede social instagram">Instagram
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/seu-usuario" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/LinkedIn.png" alt="logo da rede social Linkedin">LinkedIn
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="diferenciais">
+            <ul class="listaDiferenciais">
+                <li><img src="./assets/iconeRelogio.png" alt="icone de um relogio">Atendimento Rápido</li>
+                <li><img src="./assets/iconeEscudoDiferencial.png"
+                        alt="icone de um escudo com um check dentro">Procedimentos Eficazes</li>
+                <li><img src="./assets/logoBrasil.png" alt="icone do mapa do Brasil">Suporte em todo Brasil</li>
+            </ul>
+        </div>
+        <div class="direitosAutorias">
+            <img class="logoDireitosAutorias" src="./assets/iconeDireitosAutorais.png" alt="icone de direitos autorais">
+            <p class="conteudoDireitosAutorais">2025 Artemys. Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
+

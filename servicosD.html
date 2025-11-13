@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Artemys - Serviços</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de serviços da Artemys: Encontre veterinários e clínicas para seu pet.">
+    <meta name="keywords" content="Veterinaria, Pets, Clínicas, Veterinários, Emergência, Serviços Pet">
+    <meta name="author" content="Artemys">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="./assets/Vetorizado.svg" alt="Logo Artemys">
+                </a>
+                <div class="nav-logo-text">
+                    <span class="brand-name">ARTEMYS</span>
+                    <span class="brand-slogan">CONECTANDO QUEM AMA A QUEM CUIDA</span>
+                </div>
+            </div>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="artigoD.html">Artigos</a></li>
+                <li><a href="planoD.html">Planos de Assinatura</a></li>
+                <li><a href="sobreD.html">Sobre Nós</a></li>
+                <li><a href="servicosD.html" class="active">Serviços</a></li>
+                <li class="mobile-auth-buttons">
+                    <a href="homeLogado.html" class="mobile-btn-entrar">Entrar</a>
+                    <a href="homeLogado.html" class="mobile-btn-cadastrar">Cadastrar</a>
+                </li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="btn-login"><a href="login.html">Entrar</a></button>
+                <button class="btn-signup"><a href="login.html">Cadastrar</a></button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="busca-servicos-hero">
+            <div class="busca-servicos-container">
+                <h2 class="busca-servicos-titulo">Encontre o Melhor Cuidado para Seu Pet</h2>
+                <p class="busca-servicos-subtitulo">Conectando você aos melhores profissionais e clínicas veterinárias
+                </p>
+
+                <div class="busca-input-group">
+                    <div class="input-wrapper">
+                        <img src="assets/iconSearch.png" alt="Ícone de lupa" class="input-icon">
+                        <input type="text" id="busca-texto" placeholder="Buscar por especialidade, nome ou serviço...">
+                    </div>
+                    <div class="input-wrapper">
+                        <img src="assets/iconLocation.png" alt="Ícone de localização" class="input-icon">
+                        <input type="text" id="busca-local" placeholder="Localização (Ex: São Paulo)">
+                    </div>
+                    <button class="btn-buscar">Buscar</button>
+                </div>
+
+                <div class="estatisticas-servicos">
+                    <div class="estatistica-item">
+                        <span class="estatistica-numero">500+</span>
+                        <span class="estatistica-texto">Veterinários</span>
+                    </div>
+                    <div class="estatistica-item">
+                        <span class="estatistica-numero">200+</span>
+                        <span class="estatistica-texto">Clínicas</span>
+                    </div>
+                    <div class="estatistica-item">
+                        <span class="estatistica-numero">10K+</span>
+                        <span class="estatistica-texto">Pets Atendidos</span>
+                    </div>
+                    <div class="estatistica-item">
+                        <span class="estatistica-numero">4.8<img src="assets/iconAvaliacao.png" alt="Estrela"
+                                class="estrela-icone"></span>
+                        <span class="estatistica-texto">Avaliação Média</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="filtro-tabs">
+            <div class="tabs-container">
+                <button class="tab-button active" data-filtro="todos">Todos</button>
+                <button class="tab-button" data-filtro="vet">Veterinários Autônomos</button>
+                <button class="tab-button" data-filtro="clinica">Clínicas</button>
+            </div>
+        </section>
+
+        <section class="lista-resultados">
+            <div class="lista-container-wrapper">
+
+                <div class="lista-header">
+                    <h3 id="filtro-titulo" class="filtro-subtitulo">Todos os Resultados</h3>
+                    <p id="filtro-descricao" class="filtro-descricao">Veja todos os profissionais e clínicas
+                        disponíveis.</p>
+                </div>
+
+                <div class="grid-resultados">
+
+                    <div class="card-servico" data-tipo="clinica">
+                        <div class="card-servico-imagem-wrapper">
+                            <img src="assets/clinicaVidaanimal.png" alt="Ícone da Clínica Veterinária Vida Animal">
+                            <p class="nome-entidade">Clínica Veterinária Vida Animal</p>
+                        </div>
+                        <div class="card-servico-info">
+                            <div class="card-header-info">
+                                <h3>Clínica Veterinária Vida Animal</h3>
+                                <span class="avaliacao-badge">4.8</span>
+                            </div>
+                            <p class="especialidade-vet">Clínico Geral</p>
+                            <p class="local-anos"><img src="assets/iconLocation.png" alt="Localização"> Av.
+                                Paulista, 1000 - São Paulo,SP <img src="assets/iconMaleta.png" alt="Maleta"> 15 Anos</p>
+                            <p class="horario-valor"><img src="assets/iconCloack.png" alt="Horário"> Seg-Sex: 7H -
+                                18H <span class="valor-consulta">A partir de R$ 120</span></p>
+                            <div class="tags-servicos">
+                                <span>Consultas</span> <span>Cirurgia</span> <span>Internação</span> <span>Emergencia
+                                    24H</span>
+                            </div>
+                            <div class="card-botoes">
+                                <button class="btn-contato"><img src="assets/iconTelefone.png" alt="Telefone">
+                                    Contatar</button>
+                                <button class="btn-ver-perfil">Ver Perfil</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-servico" data-tipo="vet">
+                        <div class="card-servico-imagem-wrapper">
+                            <img src="assets/drAnaPaula.png" alt="Veterinária Ana Paula Silva">
+                        </div>
+                        <div class="card-servico-info">
+                            <div class="card-header-info">
+                                <h3>Dr. Ana Paula Silva</h3>
+                                <span class="avaliacao-badge">4.9</span>
+                            </div>
+                            <p class="especialidade-vet">Clínico Geral</p>
+                            <p class="local-anos"><img src="assets/iconLocation.png" alt="Localização"> São
+                                Paulo - SP <img src="assets/iconMaleta.png" alt="Maleta"> 8 Anos</p>
+                            <p class="horario-valor"><img src="assets/iconCloack.png" alt="Horário"> Seg-Sex:
+                                9H-18H <span class="valor-consulta">A partir de R$ 150</span></p>
+                            <div class="tags-servicos">
+                                <span>Consultas</span> <span>Vacinação</span> <span>Check-up</span>
+                            </div>
+                            <div class="card-botoes">
+                                <button class="btn-contato"><img src="assets/iconTelefone.png" alt="Telefone">
+                                    Contatar</button>
+
+                                <a href="servicosplusD.html" class="btn-ver-perfil">Ver Perfil</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-servico" data-tipo="clinica">
+                        <div class="card-servico-imagem-wrapper">
+                            <img src="assets/clinicaAnimalFeliz.png" alt="Ícone do Centro Veterinário Animal Feliz">
+                            <p class="nome-entidade">Centro Veterinário Animal Feliz</p>
+                        </div>
+                        <div class="card-servico-info">
+                            <div class="card-header-info">
+                                <h3>Centro Veterinário Animal Feliz</h3>
+                                <span class="avaliacao-badge">4.7</span>
+                            </div>
+                            <p class="especialidade-vet">Clínico Geral</p>
+                            <p class="local-anos"><img src="assets/iconLocation.png" alt="Localização"> Av
+                                Itaberaba, 2100 - São Paulo,SP <img src="assets/iconMaleta.png" alt="Maleta"> 10 Anos</p>
+                            <p class="horario-valor"><img src="assets/iconCloack.png" alt="Horário"> Seg-Sex: 7H -
+                                17H <span class="valor-consulta">A partir de R$ 100</span></p>
+                            <div class="tags-servicos">
+                                <span>Consultas</span> <span>Cirurgia</span> <span>Internação</span>
+                                <span>Vacinação</span>
+                            </div>
+                            <div class="card-botoes">
+                                <button class="btn-contato"><img src="assets/iconTelefone.png" alt="Telefone">
+                                    Contatar</button>
+                                <button class="btn-ver-perfil">Ver Perfil</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-servico" data-tipo="vet">
+                        <div class="card-servico-imagem-wrapper">
+                            <img src="assets/drCarlos.png" alt="Veterinário Carlos Mendes">
+                        </div>
+                        <div class="card-servico-info">
+                            <div class="card-header-info">
+                                <h3>Dr. Carlos Mendes</h3>
+                                <span class="avaliacao-badge">4.8</span>
+                            </div>
+                            <p class="especialidade-vet">Cirurgia e Ortopedia</p>
+                            <p class="local-anos"><img src="assets/iconLocation.png" alt="Localização"> São
+                                Paulo - SP <img src="assets/iconMaleta.png" alt="Maleta"> 12 Anos</p>
+                            <p class="horario-valor"><img src="assets/iconCloack.png" alt="Horário"> Ter-Sab:
+                                10H-19H <span class="valor-consulta">A partir de R$ 200</span></p>
+                            <div class="tags-servicos">
+                                <span>Cirurgia</span> <span>Ortopedia</span> <span>Emergências</span>
+                            </div>
+                            <div class="card-botoes">
+                                <button class="btn-contato"><img src="assets/iconTelefone.png" alt="Telefone">
+                                    Contatar</button>
+                                <button class="btn-ver-perfil">Ver Perfil</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-servico" data-tipo="clinica">
+                        <div class="card-servico-imagem-wrapper">
+                            <img src="assets/clinicaPetcar.png" alt="Ícone do Hospital Veterinário Petcare">
+                            <p class="nome-entidade">Hospital Veterinário Petcare</p>
+                        </div>
+                        <div class="card-servico-info">
+                            <div class="card-header-info">
+                                <h3>Hospital Veterinário Petcare</h3>
+                                <span class="avaliacao-badge">4.2</span>
+                            </div>
+                            <p class="especialidade-vet">Emergências e Cirurgia Avançada</p>
+                            <p class="local-anos"><img src="assets/iconLocation.png" alt="Localização"> Rua
+                                Tito, 358 - São Paulo,SP <img src="assets/iconMaleta.png" alt="Maleta"> 20 Anos</p>
+                            <p class="horario-valor"><img src="assets/iconCloack.png" alt="Horário"> Seg-Sab: 9H -
+                                19H <span class="valor-consulta">A partir de R$ 250</span></p>
+                            <div class="tags-servicos">
+                                <span>UTI Veterinária</span> <span>Exames Laboratoriais</span> <span>Internação</span>
+                                <span>Raio-X</span>
+                            </div>
+                            <div class="card-botoes">
+                                <button class="btn-contato"><img src="assets/iconTelefone.png" alt="Telefone">
+                                    Contatar</button>
+                                <button class="btn-ver-perfil">Ver Perfil</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-servico" data-tipo="vet">
+                        <div class="card-servico-imagem-wrapper">
+                            <img src="assets/draMarina.png" alt="Veterinária Marina Costa">
+                        </div>
+                        <div class="card-servico-info">
+                            <div class="card-header-info">
+                                <h3>Dra. Marina Costa</h3>
+                                <span class="avaliacao-badge">4.1</span>
+                            </div>
+                            <p class="especialidade-vet">Dermatologia Veterinária</p>
+                            <p class="local-anos"><img src="assets/iconLocation.png" alt="Localização"> São
+                                Paulo - SP <img src="assets/iconMaleta.png" alt="Maleta"> 6 Anos</p>
+                            <p class="horario-valor"><img src="assets/iconCloack.png" alt="Horário"> Seg-Qui:
+                                8H-17H <span class="valor-consulta">A partir de R$ 180</span></p>
+                            <div class="tags-servicos">
+                                <span>Dermatologia</span> <span>Alergia</span> <span>Estética</span>
+                            </div>
+                            <div class="card-botoes">
+                                <button class="btn-contato"><img src="assets/iconTelefone.png" alt="Telefone">
+                                    Contatar</button>
+                                <button class="btn-ver-perfil">Ver Perfil</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-cta-profissional">
+            <div class="cta-profissional-container">
+                <h2>É um profissional veterinário?</h2>
+                <p>Cadastre-se e conecte-se com milhares de tutores que precisam dos seus serviços</p>
+                <button class="btn-cadastrar-veterinario">Cadastrar como Veterinário</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="logoERedesRodape">
+            <div class="brand-wrapper">
+                <img class="logoRodape" src="./assets/logo.svg"
+                    alt="Logo de uma lua roxa crescente com um cachorro e um gato de cor laranja dentro da lua">
+                <div class="nomeESloganRodape">
+                    <p class="nomeProjetoRodape">Artemys</p>
+                    <p class="sloganProjetoRodape">Conectando Quem Ama a Quem Cuida</p>
+                </div>
+            </div>
+            <ul class="listaRedesSociais">
+                <li>
+                    <a href="https://github.com/Artemys-Site" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/GitHub.png" alt="logo do site github">Github
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/company/artemys-oficial/" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="./assets/iconeInstagram.png" alt="logo da rede social instagram">Instagram
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/seu-usuario" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/LinkedIn.png" alt="logo da rede social Linkedin">LinkedIn
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="diferenciais">
+            <ul class="listaDiferenciais">
+                <li><img src="./assets/iconeRelogio.png" alt="icone de um relogio">Atendimento Rápido</li>
+                <li><img src="./assets/iconeEscudoDiferencial.png"
+                        alt="icone de um escudo com um check dentro">Procedimentos Eficazes</li>
+                <li><img src="./assets/logoBrasil.png" alt="icone do mapa do Brasil">Suporte em todo Brasil</li>
+            </ul>
+        </div>
+        <div class="direitosAutorias">
+            <img class="logoDireitosAutorais" src="./assets/iconeDireitosAutorais.png" alt="icone de direitos autorais">
+            <p class="conteudoDireitosAutorais">2025 Artemys. Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
+
