@@ -1690,10 +1690,16 @@ footer {
 .menu-toggle {
     display: none;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     gap: 5px;
-    padding: 5px;
+    padding: 8px;
     z-index: 1001;
+    background: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
 }
 
 /* Classe para elementos apenas mobile - identificação no HTML */
@@ -1702,11 +1708,13 @@ footer {
 }
 
 .menu-toggle span {
+    display: block;
     width: 25px;
     height: 3px;
     background-color: #3B2561;
     border-radius: 3px;
     transition: all 0.3s ease;
+    margin: 0;
 }
 
 .menu-toggle.active span:nth-child(1) {
@@ -1794,6 +1802,11 @@ footer {
     /* Botões de autenticação mobile - escondidos no desktop */
     .mobile-auth-buttons {
         display: none;
+    }
+    
+    /* Mostrar botões de autenticação no menu hambúrguer mobile */
+    .nav-links.active .mobile-auth-buttons {
+        display: flex !important;
     }
 
     .navbar {
