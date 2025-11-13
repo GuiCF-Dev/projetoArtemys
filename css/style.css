@@ -153,6 +153,7 @@ header.main-header {
     gap: 12px;
 }
 
+.nav-buttons a,
 .nav-buttons button {
     border: none;
     border-radius: 8px;
@@ -164,6 +165,8 @@ header.main-header {
     color: #FFFFFF;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .nav-buttons button a {
