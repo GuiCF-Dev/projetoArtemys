@@ -1598,9 +1598,9 @@ footer {
     z-index: 1001;
 }
 
-/* Classe para elementos apenas mobile */
+/* Classe para elementos apenas mobile - identificação no HTML */
 .mobile-only {
-    display: none;
+    /* Esta classe serve apenas para identificação no HTML */
 }
 
 .menu-toggle span {
@@ -1643,8 +1643,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .menu-toggle,
-    .mobile-only {
+    .menu-toggle {
         display: flex;
     }
 
