@@ -64,6 +64,16 @@ header.main-header {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Reduzir padding do header quando há botões de login/cadastro (páginas deslogadas) */
+header.main-header:has(.nav-buttons) {
+    padding: 8px 0;
+}
+
+/* Reduzir tamanho da logo nas páginas deslogadas para header mais compacto */
+header.main-header:has(.nav-buttons) .nav-logo img {
+    height: 45px;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -157,7 +167,7 @@ header.main-header {
 .nav-buttons button {
     border: none;
     border-radius: 8px;
-    padding: 12px 24px;
+    padding: 8px 20px;
     font-family: 'Ysabeau SC', sans-serif;
     font-weight: 700;
     font-size: 13px;
@@ -167,11 +177,14 @@ header.main-header {
     transition: background-color 0.3s ease;
     text-decoration: none;
     display: inline-block;
+    line-height: 1.2;
 }
 
 .nav-buttons button a {
     color: #FFFFFF;
     text-decoration: none;
+    padding: 0;
+    display: inline;
 }
 
 .btn-login {
