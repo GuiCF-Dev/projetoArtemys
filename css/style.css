@@ -1704,7 +1704,8 @@ footer {
 
 /* Classe para elementos apenas mobile - identificação no HTML */
 .mobile-only {
-    /* Esta classe serve apenas para identificação no HTML */
+    /* Esta classe serve apenas para identificação no HTML - sem estilos específicos */
+    display: none;
 }
 
 .menu-toggle span {
@@ -1802,11 +1803,6 @@ footer {
     /* Botões de autenticação mobile - escondidos no desktop */
     .mobile-auth-buttons {
         display: none;
-    }
-    
-    /* Mostrar botões de autenticação no menu hambúrguer mobile */
-    .nav-links.active .mobile-auth-buttons {
-        display: flex !important;
     }
 
     .navbar {
